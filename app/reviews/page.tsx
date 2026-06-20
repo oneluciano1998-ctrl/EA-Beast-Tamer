@@ -3,6 +3,7 @@ import "../styles/reviews.css";
 
 export default function ReviewsPage() {
   return (
+    <main className="main-layout">
     <>
       <nav>
         <Link href="/" className="floating-home">
@@ -88,5 +89,6 @@ export default function ReviewsPage() {
         </div>
       </section>
     </>
+    </main>
   );
 }

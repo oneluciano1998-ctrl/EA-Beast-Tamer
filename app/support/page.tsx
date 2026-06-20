@@ -3,6 +3,7 @@ import "../styles/support.css";
 
 export default function SupportPage() {
   return (
+    <main className="main-layout">
     <>
       <nav>
         <Link href="/" className="floating-home">
@@ -88,5 +89,6 @@ export default function SupportPage() {
         </a>
       </section>
     </>
+    </main>
   );
 }

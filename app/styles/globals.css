@@ -26,24 +26,6 @@
     font-family:'Poppins',sans-serif;
 }
 
-html,
-body{
-    width:100%;
-    overflow-x:hidden;
-}
-
-body{
-    background:
-    linear-gradient(
-        180deg,
-        #020817 0%,
-        #071426 50%,
-        #0b1f45 100%
-    );
-
-    min-height:100vh;
-    color:white;
-}
 
 img{
     max-width:100%;
@@ -62,7 +44,26 @@ img{
     100%{transform:scale(1);}
 }
 
-.main-layout{
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+
     background:#071426;
+    color:#ffffff;
+}
+
+p{
+    color:#ffffff;
+}
+.main-layout{
     min-height:100vh;
+
+    background:
+    linear-gradient(
+        180deg,
+        #020817 0%,
+        #071426 50%,
+        #0b1f45 100%
+    );
 }

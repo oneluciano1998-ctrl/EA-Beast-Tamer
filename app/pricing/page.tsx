@@ -4,6 +4,7 @@ import "../styles/pricing.css";
 
 export default function PricingPage() {
   return (
+    <main className="main-layout">
     <>
  <nav>
   <Link href="/" className="floating-home">
@@ -88,5 +89,6 @@ export default function PricingPage() {
         </div>
       </section>
     </>
+    </main>
   );
 }

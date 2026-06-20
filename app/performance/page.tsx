@@ -3,6 +3,7 @@ import "../styles/performance.css";
 
 export default function PerformancePage() {
   return (
+    <main className="main-layout">
     <>
       <nav>
         <Link href="/" className="floating-home">
@@ -108,5 +109,6 @@ export default function PerformancePage() {
         </a>
       </section>
     </>
+    </main>
   );
 }

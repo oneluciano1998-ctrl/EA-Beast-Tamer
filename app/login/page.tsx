@@ -7,6 +7,7 @@ import "../styles/login.css";
 
 export default function LoginPage() {
   return (
+    <main className="main-layout">
     <div className="login-page">
 
       <div className="bg-glow-top"></div>
@@ -122,6 +123,6 @@ export default function LoginPage() {
 
       </div>
     </div>
-
+</main>
   );
 }
