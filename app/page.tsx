@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import "./styles/home.css";
-import "./styles/login.css";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
