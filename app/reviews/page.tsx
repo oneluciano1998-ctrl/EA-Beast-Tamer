@@ -49,8 +49,8 @@ export default function ReviewsPage() {
 
         </section>
 
-      <section className="review-gallery">
-        <h2 className="section-title">Real Results</h2>
+      <section className="real-results">
+        <h2 className="real-results-title">Real Results</h2>
 
         <div className="gallery">
         <img src="/backtest.jpg" alt="Backtest" />

@@ -64,7 +64,7 @@ export default function PerformancePage() {
 
 <section className="review-section">
 
-  <h2 className="section-title">Verified Trader Reviews</h2>
+  <h2 className="verified-reviews-title">Verified Trader Reviews</h2>
 
   <div className="review-gallery">
 
@@ -99,7 +99,7 @@ export default function PerformancePage() {
       </section>
 
       <section className="myfxbook">
-        <h2>Verified Results</h2>
+        <h2>Verified Trader Reviews</h2>
 
         <a
           href="performance-index.html"
