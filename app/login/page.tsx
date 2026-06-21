@@ -7,13 +7,12 @@ import "../styles/login.css";
 
 export default function LoginPage() {
   return (
-    <main className="main-layout">
-    <div className="login-page">
+        <main className="login-page">
 
-      <div className="bg-glow-top"></div>
-      <div className="bg-glow-bottom"></div>
+        <div className="bg-glow-top"></div>
+        <div className="bg-glow-bottom"></div>
 
-      <div className="login-container">
+        <div className="login-container">
 
         <div className="status-badge-wrapper">
           <span className="status-badge">
@@ -21,6 +20,7 @@ export default function LoginPage() {
             EA Auth Server Online
           </span>
         </div>
+        
 
 <div className="header-section">
 
@@ -54,7 +54,7 @@ export default function LoginPage() {
               <input
                 type="text"
                 className="form-input"
-                placeholder="กรอกชื่อผู้ใช้ หรือ อีเมลของคุณ"
+                placeholder="Username or email"
               />
             </div>
           </div>
@@ -68,7 +68,7 @@ export default function LoginPage() {
               <input
                 type="password"
                 className="form-input"
-                placeholder="กรอกรหัสผ่านระบบความปลอดภัย"
+                placeholder="Security password"
               />
             </div>
           </div>
@@ -120,8 +120,6 @@ export default function LoginPage() {
           </p>
 
         </div>
-
-      </div>
     </div>
 </main>
   );

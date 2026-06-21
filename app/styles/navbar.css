@@ -11,7 +11,7 @@ nav{
 
 nav ul{
     display:flex;
-    gap:30px;
+    gap:15px;
     list-style:none;
 }
 
@@ -40,7 +40,8 @@ nav a{
 
 .auth-buttons{
     display:flex;
-    gap:10px;
+    align-items:center;
+    gap:8px;
 }
 
 .navbar-menu a{
@@ -50,7 +51,7 @@ nav a{
     font-size:clamp(14px,2vw,16px);
     font-weight:500;
     padding:8px 0;
-    margin:0 20px;
+    margin:0 10px;
     display:inline-block;
     transition:color .3s ease,text-shadow .3s ease;
 }
@@ -95,13 +96,21 @@ nav a{
     cursor:pointer;
 }
 
-@media screen and (max-width:768px){
+.navbar-menu{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-left:auto;
+}
+
+@media screen and (max-width:992px){
 
     nav{
         flex-direction:row;
         justify-content:space-between;
         padding:20px;
         position:relative;
+        z-index:10000;
     }
 
     .menu-toggle{
@@ -114,11 +123,13 @@ nav a{
         top:90px;
         left:0;
         width:100%;
-        background:transparent;
+        background:#071426;
+        z-index:9999;
         flex-direction:column;
         gap:15px;
         padding:20px;
         border-top:1px solid rgba(255,255,255,.1);
+        box-shadow:0 10px 30px rgba(0,0,0,.4);
     }
 
     .navbar-menu.active{
@@ -128,6 +139,7 @@ nav a{
     .navbar-menu a{
         margin:0;
         text-align:center;
+        width:100%;
     }
 
     .auth-buttons{

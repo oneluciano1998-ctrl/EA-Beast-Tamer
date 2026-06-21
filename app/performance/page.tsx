@@ -10,10 +10,6 @@ export default function PerformancePage() {
           ← Home
         </Link>
 
-        <div className="logo">
-          <img src="/logoea.png" alt="Beast Tamer" />
-          <span>BEAST TAMER</span>
-        </div>
       </nav>
 
       <section className="performance-hero">

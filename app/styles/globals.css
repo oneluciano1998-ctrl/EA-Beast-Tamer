@@ -19,13 +19,6 @@
   }
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
 
 img{
     max-width:100%;
@@ -47,23 +40,25 @@ img{
 html,
 body{
     width:100%;
+    min-height:100%;
+
     overflow-x:hidden;
 
     background:#071426;
     color:#ffffff;
 }
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+}
+
 p{
     color:#ffffff;
-}
-.main-layout{
-    min-height:100vh;
-
-    background:
-    linear-gradient(
-        180deg,
-        #020817 0%,
-        #071426 50%,
-        #0b1f45 100%
-    );
 }

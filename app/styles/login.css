@@ -12,16 +12,17 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', 'Prompt', sans-serif;
-    background-color: #030712;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    position: relative;
-    overflow-x: hidden;
+.login-page{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:24px;
+
+    position:relative;
+    overflow:hidden;
 }
 
 
@@ -60,7 +61,7 @@ body {
 
 .login-container{
     width:100%;
-    max-width:650px;
+    max-width:500px;
 
     background:rgba(10,20,40,.85);
 
@@ -68,13 +69,15 @@ body {
 
     border-radius:30px;
 
-    padding:50px;
+    padding:40px;
 
     backdrop-filter:blur(15px);
 
     box-shadow:
     0 0 40px rgba(0,191,255,.15),
     0 0 80px rgba(0,191,255,.08);
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .login-container{
@@ -91,6 +94,11 @@ body {
     border:1px solid rgba(0,191,255,.15);
 
     pointer-events:none;
+}
+
+.login-divider{
+    width:80%;
+    margin:25px auto;
 }
 
 /* แถบสถานะ Server Online */
@@ -138,7 +146,7 @@ body {
 
 .header-section {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .logo-box{
@@ -331,14 +339,6 @@ body {
     display: block;
 }
 
-.encryption-text {
-    font-size: clamp(2px, 6vw, 12px);
-    color: #64748b;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
 
 /* ปุ่มกดยืนยัน (Submit Button) */
 
@@ -436,16 +436,14 @@ body {
     /* บังคับเต็มความกว้างกล่องเพื่อให้เซนเตอร์ทำงาน */
 }
 
-.encryption-text {
-    font-size: 12px;
-    color: #475569;
-    /* สีสลัวสไตล์หรูหรา ไม่แย่งความเด่นของปุ่ม */
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    /* ระยะห่างระหว่างไอคอนโล่กับตัวหนังสือ */
-    letter-spacing: 0.02em;
+.security-text{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    text-align:center;
 }
+
 
 .encryption-text{
     display:flex;
@@ -453,18 +451,18 @@ body {
     align-items:center;
     gap:8px;
 
-    color:#7c8ea8;
+    color:#7c8ea8 !important;
     font-size:13px;
 }
 
 .shield-icon{
-    color:#06b6d4;
+    color:#06b6d4 !important;
     font-size:14px;
 }
 
 .logo-box{
-    width:140px;
-    height:140px;
+    width:120px;
+    height:120px;
 
     display:flex;
     justify-content:center;
@@ -474,10 +472,36 @@ body {
 }
 
 .login-logo{
-    width:130px;
+    width:100px;
     height:auto;
 
     filter:
         drop-shadow(0 0 15px #00bfff)
         drop-shadow(0 0 30px #00bfff);
+}
+
+@media (max-width:768px){
+
+    .register-link{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:8px;
+
+        text-align:center;
+    }
+
+}
+
+.login-page{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:24px;
+
+    position:relative;
+    overflow:hidden;
 }

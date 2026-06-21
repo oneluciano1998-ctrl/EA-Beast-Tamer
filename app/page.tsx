@@ -22,21 +22,23 @@ export default function Home() {
           ☰
         </button>
 
-        <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
-          <Link href="/">Home</Link>
-          <Link href="/performance">Performance</Link>
-          <Link href="/pricing">Pricing</Link>
-          <Link href="/reviews">Reviews</Link>
-          <Link href="/support">Support</Link>
+<div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
+  <Link href="/">Home</Link>
+  <Link href="/performance">Performance</Link>
+  <Link href="/pricing">Pricing</Link>
+  <Link href="/reviews">Reviews</Link>
+  <Link href="/support">Support</Link>
 
-          <a href="/login" className="login-btn">
-            Login
-          </a>
+  <div className="auth-buttons">
+    <a href="/login" className="login-btn">
+      Login
+    </a>
 
-          <a href="/register" className="register-btn">
-            Register
-          </a>
-        </div>
+    <a href="/register" className="register-btn">
+      Register
+    </a>
+  </div>
+</div>
       </nav>
 
       <section className="hero">

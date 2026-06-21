@@ -26,12 +26,23 @@
     padding:80px 10%;
 }
 
+@media (max-width:768px){
+
+    .support-grid{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+}
+
 .support-card{
     padding:35px;
     backdrop-filter:blur(10px);
     border:1px solid rgba(0,191,255,.2);
     border-radius:20px;
     transition:.3s;
+    width:100%;
 }
 
 .support-card:hover{

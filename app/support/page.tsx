@@ -10,11 +10,6 @@ export default function SupportPage() {
           ← Home
         </Link>
 
-        <div className="logo">
-          <img src="/logoea.png" alt="Logo" />
-
-          <span>BEAST TAMER</span>
-        </div>
       </nav>
 
       <section className="support-hero">

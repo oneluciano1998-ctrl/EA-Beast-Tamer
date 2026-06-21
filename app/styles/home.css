@@ -45,14 +45,26 @@
 
 .broker-grid{
     display:grid;
-
-    grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(220px,1fr)
-    );
-
+    grid-template-columns:repeat(4,1fr);
     gap:20px;
+}
+
+/* Tablet */
+@media (max-width:1024px){
+
+    .broker-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .broker-grid{
+        grid-template-columns:1fr;
+    }
+
 }
 
 .broker-box{
@@ -74,14 +86,6 @@
     padding: 10px 20px;
     background: transparent;
     border: 1px solid #00bfff;
-    color: white;
-    cursor: pointer;
-}
-
-.register-btn {
-    padding: 10px 20px;
-    background: #00bfff;
-    border: none;
     color: white;
     cursor: pointer;
 }
@@ -135,6 +139,8 @@
 
     .hero-logo{
     width: clamp(120px, 18vw, 220px);
+    max-width:100%;
+    height:auto;
     margin:0 auto 30px;
     display:block;
     filter:drop-shadow(0 0 30px #00bfff);

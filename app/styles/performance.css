@@ -219,12 +219,17 @@
     gap:25px;
     max-width:1400px;
     margin:0 auto;
+    justify-items:center;
 }
 
 .proof-grid img{
     width:100%;
-    max-height:350px;
-    object-fit:cover;
+    max-width:500px;
+    height:auto;
+
+    border-radius:15px;
+
+    border:1px solid rgba(255,255,255,.1);
 }
 
 .proof-grid img:hover{

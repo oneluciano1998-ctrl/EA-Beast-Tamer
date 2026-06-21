@@ -10,10 +10,6 @@ export default function ReviewsPage() {
           ← Home
         </Link>
 
-        <div className="logo">
-          <img src="/logoea.png" alt="Logo" />
-          <span>BEAST TAMER</span>
-        </div>
       </nav>
 
       <section className="reviews-hero">
