@@ -2,10 +2,44 @@
 
 import Link from "next/link";
 import { FaShieldAlt } from "react-icons/fa";
-import { ImGithub } from "react-icons/im";
+import { useState } from "react";
 import "../styles/login.css";
 
 export default function LoginPage() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const handleLogin = async (
+  e: React.FormEvent
+) => {
+  e.preventDefault();
+
+  const response = await fetch(
+    "/api/login",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type":
+          "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    }
+  );
+
+  const data =
+    await response.json();
+
+  if (data.success) {
+    alert("Login Success");
+
+    window.location.href =
+      "/dashboard";
+  } else {
+    alert(data.message);
+  }
+};
   return (
         <main className="login-page">
 
@@ -43,7 +77,7 @@ export default function LoginPage() {
 
             </div>
 
-        <form>
+        <form onSubmit={handleLogin}>
 
           <div className="form-group">
             <label className="form-label">
@@ -51,11 +85,15 @@ export default function LoginPage() {
             </label>
 
             <div className="input-wrapper">
-              <input
+                <input
                 type="text"
                 className="form-input"
                 placeholder="Username or email"
-              />
+                value={email}
+                onChange={(e) =>
+                    setEmail(e.target.value)
+                }
+                />
             </div>
           </div>
 
@@ -65,11 +103,15 @@ export default function LoginPage() {
             </label>
 
             <div className="input-wrapper">
-              <input
+                <input
                 type="password"
                 className="form-input"
                 placeholder="Security password"
-              />
+                value={password}
+                onChange={(e) =>
+                    setPassword(e.target.value)
+                }
+                />
             </div>
           </div>
 

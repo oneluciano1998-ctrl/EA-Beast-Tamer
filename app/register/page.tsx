@@ -20,6 +20,47 @@ import { useState } from "react";
 export default function RegisterPage() {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const handleRegister = async (
+  e: React.FormEvent
+) => {
+  e.preventDefault();
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match");
+    return;
+  }
+
+  const response = await fetch(
+    "/api/register",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type":
+          "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        email,
+        password,
+      }),
+    }
+  );
+
+  const data =
+    await response.json();
+
+  if (data.success) {
+    alert(
+      "Account created successfully"
+    );
+  } else {
+    alert(data.message);
+  }
+};
   return (
 <main className="register-page">
 
@@ -44,34 +85,43 @@ export default function RegisterPage() {
   และระบบ License สำหรับ MT4/MT5
 </p>
 
-        <form className="register-form">
+        <form
+  className="register-form"
+  onSubmit={handleRegister}
+>
 
             <div className="input-group">
   <FaUser className="input-icon" />
 
-  <input
-    type="text"
-    placeholder="ตั้งชื่อผู้ใช้ของคุณ"
-  />
+<input
+  type="text"
+  placeholder="ตั้งชื่อผู้ใช้ของคุณ"
+  value={username}
+  onChange={(e) => setUsername(e.target.value)}
+/>
 </div>
 
 <div className="input-group">
   <FaEnvelope className="input-icon" />
 
-  <input
-    type="email"
-    placeholder="กรอกอีเมลจริง"
-  />
+<input
+  type="email"
+  placeholder="กรอกอีเมลจริง"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
 </div>
 
 <div className="input-group">
 
   <FaLock className="input-icon" />
 
-  <input
+    <input
     type={showPassword ? "text" : "password"}
     placeholder="ตั้งรหัสผ่าน"
-  />
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    />
 
   <button
     type="button"
@@ -90,6 +140,8 @@ export default function RegisterPage() {
   <input
     type={showConfirmPassword ? "text" : "password"}
     placeholder="ยืนยันรหัสผ่าน"
+    value={confirmPassword}
+onChange={(e) => setConfirmPassword(e.target.value)}
   />
 
   <button
@@ -104,10 +156,12 @@ export default function RegisterPage() {
 
 </div>
 
-<button className="register-submit">
-  Create Account
-  <FaUserPlus />
-</button>
+    <button 
+    type="submit"
+    className="register-submit">
+    Create Account
+    <FaUserPlus />
+    </button>
         </form>
 
         
